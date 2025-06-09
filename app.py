@@ -57,7 +57,9 @@ if st.button("Convert & Upload to Google Drive"):
                 file_id = file_drive['id']
                 st.success("Uploaded to Google Drive!")
                 st.markdown(f"Public JSON URL: [Click to Download](https://drive.google.com/uc?id={file_id}&export=download)")
-
+try:
+    drive= GoogleDrive(gauth)
+    
 except Exception as e:
     st.error(f"Error: {e}")
 
