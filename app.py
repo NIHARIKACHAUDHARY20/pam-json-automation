@@ -1,9 +1,9 @@
 import streamlit as st
 import json
 import tempfile
-import os from pydrive.auth
-import GoogleAuth from pydrive.drive
-import GoogleDrive
+import os 
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 
 @st.cache_resource
 def authenticate_drive():
